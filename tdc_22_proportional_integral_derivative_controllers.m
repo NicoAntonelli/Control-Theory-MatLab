@@ -5,6 +5,10 @@
 % --- Proportional Integral Derivative Controllers ---
 
 
+% Proportional Control - TF
+kp = 1;
+GcP = tf(kp);
+
 % PID Control - Transference Function
 % kp*[1 + (1/Ti*s) + Td*s] = (kp*Ti*Td*s^2 + kp*Ti*s + kp)/Ti*s
 Ti = 1;   % Integral Coefficient
@@ -12,10 +16,6 @@ Td = 0.5; % Derivative Coefficient
 num = [kp*Td*Ti, kp*Ti, kp];
 den = [Ti, 0];
 GcPID = tf(num, den);
-
-% Proportional Control - TF
-kp = 1;
-GcP = tf(kp);
 
 % Gp = Plant - TF (Poles on -0.5 & 1, No Zeros)
 z = [''];
@@ -48,7 +48,6 @@ Td = 0.1;
 num = [kp*Td*Ti, kp*Ti, kp];
 den = [Ti, 0];
 GcPID = tf(num, den);
-% Feedback function = Get the TF Closed Loop
 Tflc1 = feedback(GcPID*Gp, H);
 
 % PID Controller - Output with Td = 2
@@ -77,6 +76,6 @@ xlim([-1, 20]);
 ylim([0, 1.5]);
 xlabel('Time');
 ylabel('Amplitude');
-title('PID Controller - System Responses');
+title('PID Controllers - System Response');
 legend('Unistep', 'TFLC1 - Td=0.1', 'TFLC1 - Td=2', 'TFLC1 - Td=10');
 hold off;

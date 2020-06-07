@@ -55,7 +55,7 @@ plot(t, unistep, '-r');
 % Feedback function = Get the TF Closed Loop
 Tflc1 = feedback(GcP*Gp, H);
 
-% Proportional Controller - Output without Delay
+% Proportional Controller - Output with Transport Delay
 Tflc2 = feedback(GcP*Gp*D, H);
 
 % Step Responses
