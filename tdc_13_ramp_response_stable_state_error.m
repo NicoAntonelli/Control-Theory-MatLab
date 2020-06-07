@@ -12,9 +12,10 @@ k = 100;
 [num, den] = zp2tf(z, p, k);
 TFG = tf(num, den);
 
-% R = laplace transform of the input signal, Ramp input is 1/s^2
-R = tf(1/s^2);
-% Transference function * R = desired response (Ramp representation)
+% ramp = 1/s^2 = laplace transform of the input signal
+s = tf('s');
+R = 1/s^2;
+% Transference function * R = desired response (Ramp)
 impulse(TFG*R);
 
 xlim();
