@@ -2,7 +2,7 @@
 % 15/05/2020
 % Nico Antonelli
 
-% --- Roots: Gemetric Locus, More Poles ---
+% --- Roots: Geometric Locus, More Poles ---
 
 
 % Example 1: With two Poles:
@@ -38,7 +38,7 @@ step(G1, '-r', G2, '-g', G3, '-b');
 
 xlim([-1, 60]);
 ylim([0, 1.5]);
-title('Impulse responses of Example 1');
+title('Step responses of Example 1');
 legend('Unistep', 'G1, k = 0.1', 'G2, k = 0.25', 'G3, k = 3')
 hold off;
 

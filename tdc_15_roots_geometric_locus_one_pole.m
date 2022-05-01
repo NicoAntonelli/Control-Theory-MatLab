@@ -2,7 +2,7 @@
 % 15/05/2020
 % Nico Antonelli
 
-% --- Roots: Gemetric Locus, One Pole ---
+% --- Roots: Geometric Locus, One Pole ---
 
 
 % TF_open   = k/(s+2)
@@ -37,7 +37,7 @@ step(G1, '-r', G2, '-g', G3, '-b');
 
 xlim([-1, 3]);
 ylim([0, 1.2]);
-title('Impulse responses');
+title('Step responses');
 legend('Unistep', 'G1, k = 1', 'G2, k = 3', 'G3, k = 5')
 hold off;
 
