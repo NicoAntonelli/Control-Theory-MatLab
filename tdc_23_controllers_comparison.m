@@ -6,7 +6,7 @@
 
 
 % General Parameters
-% TF_plant = 1/s(s+1) = 1/(s^s+s+0)
+% TF_plant = 1/s(s+1) = 1/(s^2+s+0)
 % Feedback (H) = 1, Every kp = 1
 kp = 1;
 
@@ -95,5 +95,5 @@ num = [ki];
 den = [1, 1, 0, 0];
 TFOL_I = tf(num, den);
 rlocus(TFOL_I);
-legend('TF Open Loop: ki/(s^3s^2+s)')
+legend('TF Open Loop: ki/(s^3+s^2)')
 title('Integral Controller (Unstable) Root Locus');
