@@ -10,7 +10,7 @@ kp = 1;
 GcP = tf(kp);
 
 % PID Control - Transference Function
-% kp*[1 + (1/Ti*s) + Td*s] = (kp*Ti*Td*s^2 + kp*Ti*s + kp)/Ti*s
+% kp*[1 + 1/(Ti*s) + Td*s] = (kp*Ti*Td*s^2 + kp*Ti*s + kp)/(Ti*s)
 Ti = 1;   % Integral Coefficient
 Td = 0.5; % Derivative Coefficient
 num = [kp*Td*Ti, kp*Ti, kp];

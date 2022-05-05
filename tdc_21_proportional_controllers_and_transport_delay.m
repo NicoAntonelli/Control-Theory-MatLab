@@ -31,21 +31,20 @@ TfloProp1 = GcP*Gp*H;
 TfloProp2 = GcP*Gp*H*D;
 
 % Proportional Controller Rlocus - Without Delay
-figure(2);
 rlocus(TfloProp1);
 xlim([-6, 8]);
 ylim([-4, 4]);
 title("Proportional Controller without Delay");
 
 % Proportional Controller Rlocus - Transport Delay
-figure(3);
+figure(2);
 rlocus(TfloProp2);
 xlim([-6, 8]);
 ylim([-4, 4]);
 title("Proportional Controller with Transport Delay");
 
 % Unistep
-figure(4);
+figure(3);
 hold on;
 t = (-1:0.01:60);
 unistep = t>=0;
