@@ -13,10 +13,10 @@ t3 = [0:0.0001:0.5];
 % Sinusoidal Function Examples
 x1 = 1 * sin(t1);
 x2 = 1 * sin(100 * t2);
-x3 = 1 * sin(100 * t3);
+x3 = 1 * sin(1000 * t3);
 
 % TF Definition
-num =[100];
+num = [100];
 den = [1, 10];
 GA = tf(num, den);
 

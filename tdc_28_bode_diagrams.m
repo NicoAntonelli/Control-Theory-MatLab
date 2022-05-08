@@ -15,9 +15,9 @@ title('Bode Diagram of Example 1');
 
 % Step Response
 figure(2);
-TFDT = TFOL; % Direct Transference TF (With Unitary Feedback)
-TFCL = feedback(TFDT, 1); % Closed Loop TF - Step Response
-step(TFCL);
+TFDP = TFOL; % Direct Path TF (TFDP = Ignore Feedback TF)
+TFCL = feedback(TFDT, 1); % Closed Loop TF - Unitary Feedback
+step(TFCL); % Step Response of Closed Loop TF
 title('Step Response of Example 1');
 
 %% Second Example: Unstable
